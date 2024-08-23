@@ -1,0 +1,50 @@
+.contactForm {
+  padding: 2rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  max-width: 40rem;
+  margin: 2rem 0;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.inputField {
+  width: 100%;
+  padding: 1rem;
+  padding-right: 4rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+}
+
+.inputField:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.inputIcon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.6rem;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.submitButton {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
