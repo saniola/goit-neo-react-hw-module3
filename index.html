@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,23 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <iframe
+      id="2400"
+      allowtransparency="true"
+      frameborder="0"
+      style="width: 100%; border: none"
+      src="//www.chess-6.com/emboard?id=2400"
+    ></iframe>
+    <script>
+      window.addEventListener('message', (e) => {
+        e['data'] &&
+          '2400' === e['data']['id'] &&
+          document.getElementById(`${e['data']['id']}`) &&
+          (document.getElementById(`${e['data']['id']}`).style.height =
+            `${e['data']['frameHeight'] + 30}px`);
+      });
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
