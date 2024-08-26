@@ -21,7 +21,7 @@
           '2400' === e['data']['id'] &&
           document.getElementById(`${e['data']['id']}`) &&
           (document.getElementById(`${e['data']['id']}`).style.height =
-            'fit-content');
+            `${e['data']['frameHeight'] + 37}px`);
       });
     </script>
     <script type="module" src="/src/main.jsx"></script>
