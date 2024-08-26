@@ -17,11 +17,13 @@
     ></iframe>
     <script>
       window.addEventListener('message', (e) => {
-        e['data'] &&
-          '2400' === e['data']['id'] &&
-          document.getElementById(`${e['data']['id']}`) &&
-          (document.getElementById(`${e['data']['id']}`).style.height =
-            `${e['data']['frameHeight'] + 37}px`);
+        const { data } = e;
+        if (data?.id === '2400') {
+          const element = document.getElementById(data.id);
+          if (element) {
+            element.style.height = `${data.frameHeight + 37}px`;
+          }
+        }
       });
     </script>
     <script type="module" src="/src/main.jsx"></script>
