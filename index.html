@@ -8,24 +8,6 @@
   <body>
     <div id="root"></div>
 
-    <iframe
-      id="2400"
-      allowtransparency="true"
-      frameborder="0"
-      style="width: 100%; border: none"
-      src="//www.chess-2.com/emboard?id=2400"
-    ></iframe>
-    <script>
-      window.addEventListener('message', (e) => {
-        const { data } = e;
-        if (data?.id === '2400') {
-          const element = document.getElementById(data.id);
-          if (element) {
-            element.style.height = `${data.frameHeight + 37}px`;
-          }
-        }
-      });
-    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
